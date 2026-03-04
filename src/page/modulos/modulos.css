@@ -1,0 +1,15 @@
+.card{
+    width: 80%;
+    border: 3px solid green;
+
+    text-align: center;
+    display: grid;
+}
+.card-img-top{
+    width: 50%;
+    height: 155px;
+}
+.card-title{
+    font-size: 30px;
+    margin: 0px;
+}

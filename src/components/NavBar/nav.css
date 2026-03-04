@@ -1,0 +1,17 @@
+.titulo{
+    text-align: center;
+
+}
+
+#btn-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-around;
+
+}
+
+.btn {
+    box-shadow: 1px 1px 8px black;
+
+}

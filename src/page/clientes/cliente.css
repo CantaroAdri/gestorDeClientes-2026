@@ -1,0 +1,83 @@
+/* 1. EL CONTENEDOR PRINCIPAL (Invisible, solo organiza) */
+.contenedor-doble {
+  display: flex; /* Activa las columnas */
+  flex-direction: row; /* Uno al lado del otro */
+  gap: 25px; /* Espacio entre el formulario y la lista */
+  width: 95%;
+  max-width: 1200px;
+  margin: 40px auto; /* Centrado en la página */
+  align-items: flex-start; /* Alinea ambos arriba */
+}
+
+/* 2. LAS CAJAS NEGRAS (Paneles) */
+.panel {
+    
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  padding: 30px;
+  flex: 1; /* Ambos ocupan el 50% del ancho disponible */
+  
+  /* Sombra suave */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 3. Ajuste específico para la lista (Scroll si es muy larga) */
+.panel-lista {
+  max-height: 80vh; /* Altura máxima */
+  overflow-y: auto; /* Scroll interno si hay muchos clientes */
+}
+
+/* --- ESTILOS INTERNOS (Inputs, Botones) --- */
+.subtitulo { text-align: center; margin-bottom: 20px; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.btn-guardar {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.btn-guardar:hover { background-color: rgb(50, 184, 218); }
+
+/* --- RESPONSIVE: En celulares se pone uno abajo del otro --- */
+@media (max-width: 768px) {
+  .contenedor-doble {
+    flex-direction: column;
+  }
+}
+.btn-eliminar {
+  margin-top: 15px;
+  background-color: #ff4d4d; /* Rojo */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.btn-eliminar:hover {
+  background-color: #cc0000;
+}
